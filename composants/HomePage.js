@@ -18,7 +18,6 @@ export default function HomePage() {
         <Tab.Screen name="Favoris" component={Favoris} />
         <Tab.Screen name="Profil" component={Profil} />
     </Tab.Navigator>
-    // <View></View>
     );
 }
 

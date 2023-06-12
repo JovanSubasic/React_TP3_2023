@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-// import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { StyleSheet, Text, View , Button} from 'react-native';
+import { Ionicons } from "@expo/vector-icons";
 
 // pré-requis install navigation : 
 // npm install @react-navigation/native
@@ -11,7 +11,21 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function Profil() {
     return (
     <View style={styles.container}>
-        <Text>Profil utilisateur</Text> 
+        <Ionicons name="md-person-circle-outline" size={80} color="#e8a9318a" />
+        <Text style={styles.textCardCocktails}>Jovan Subasic</Text> 
+
+        <Text style={styles.text}>jovan.subasic@gmail.com</Text> 
+
+        <Text>{"\n"}{"\n"}</Text> 
+
+
+        <Button 
+    
+            color="#e8a9318a" 
+            title="Déconnexion" 
+            onPress={() => console.log("deco")}
+        />
+
         <StatusBar style="auto" />
     </View>
     );
@@ -23,5 +37,18 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
+    },
+    textCardCocktails: {
+        fontSize: 20,
+        fontWeight: 'bold', 
+        marginTop: 20,
+        marginBottom: 20,
+        textAlign: 'center',
+    },
+    text: {
+        fontSize: 15,
+        marginTop: 20,
+        marginBottom: 20,
+        textAlign: 'center',
     },
 });
